@@ -1,5 +1,5 @@
 {
-  "name": "fastify-compile-schemas",
+  "name": "compile-schemas-to-typescript",
   "version": "0.0.1",
   "description": "Transform a directory of JSON Schems into TypeScript Interfaces",
   "main": "build/index.js",
