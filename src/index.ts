@@ -8,6 +8,10 @@ const fileOutputPath = (file: string, output: string): string => {
 }
 
 async function compileSchemas (input: string, output: string): Promise<void> {
+  if (!input || !output) {
+    throw new Error('Input and Output paths must be specified')
+  }
+
   const files = await fs.readdir(path.resolve(input))
   for (const file of files) {
     if (path.extname(file) === '.json') {
