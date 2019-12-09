@@ -1,0 +1,10 @@
+{
+  "title": "Foo Schema",
+  "type": "object",
+  "properties": {
+    "fuzz": { "type": "string" },
+    "buzz": { "type": "integer" }
+  },
+  "additionalProperties": false,
+  "required": ["fuzz"]
+}

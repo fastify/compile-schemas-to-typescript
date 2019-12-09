@@ -1,0 +1,34 @@
+{
+  "name": "fastify-compile-schemas",
+  "version": "0.0.1",
+  "description": "Transform a directory of JSON Schems into TypeScript Interfaces",
+  "main": "build/index.js",
+  "scripts": {
+    "compile": "tsc -p tsconfig.json",
+    "start": "node lib/index.js",
+    "lint": "eslint 'src/**/*.ts'",
+    "test": "npm run compile && tap --no-cov --no-ts"
+  },
+  "keywords": [
+    "typescript",
+    "json schema"
+  ],
+  "author": "Ethan Arrowood <ethan.arrowood@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^12.12.15",
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@typescript-eslint/parser": "^2.10.0",
+    "eslint": "^6.7.2",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "tap": "^14.10.2",
+    "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "json-schema-to-typescript": "^8.0.0"
+  }
+}
