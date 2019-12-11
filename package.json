@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Transform a directory of JSON Schems into TypeScript Interfaces",
   "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
     "compile": "tsc -p tsconfig.json",
     "start": "node lib/index.js",
@@ -30,5 +31,11 @@
   },
   "dependencies": {
     "json-schema-to-typescript": "^8.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fastify/compile-schemas-to-typescript.git"
+  },
+  "homepage": "https://github.com/fastify/compile-schemas-to-typescript",
+  "bugs": "https://github.com/fastify/compile-schemas-to-typescript/issues"
 }

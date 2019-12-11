@@ -5,8 +5,6 @@ const compileSchemas = require('../build/index.js')
 const fs = require('fs')
 const tap = require('tap')
 
-
-
 tap.test('compileSchemas', async t => {
   t.plan(2)
 
