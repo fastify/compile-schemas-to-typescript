@@ -8,7 +8,8 @@
     "compile": "tsc -p tsconfig.json",
     "start": "node lib/index.js",
     "lint": "eslint 'src/**/*.ts'",
-    "test": "npm run compile && tap --no-cov --no-ts"
+    "test": "npm run compile && tap --no-cov --no-ts",
+    "prepublish": "npm run compile"
   },
   "keywords": [
     "typescript",
