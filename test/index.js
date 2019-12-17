@@ -4,14 +4,16 @@
 const compileSchemas = require('../build/index.js')
 const fs = require('fs')
 const tap = require('tap')
+const rmdir = require('rimraf')
 
 tap.test('compileSchemas', t => {
 
   t.test('should correctly export typescript interface', async t => {
     t.plan(2)
   
-    t.tearDown(async () => {
-      await fs.promises.rmdir('./test/types', { recursive: true })
+    t.tearDown(() => {
+      // await fs.promises.rmdir('./test/types', { recursive: true }) // only works on Node12 using rimraf for now
+      rmdir.sync('./test/types')
     })
   
     try {

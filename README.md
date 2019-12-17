@@ -20,3 +20,13 @@ const compileSchemas = require('compile-schemas-to-typescript')
   }
 })()
 ```
+
+## Contributing
+
+This project is actively maintained by the Fastify team.
+
+Contributions are welcome! Please open an issue and a pull request.
+
+## License
+
+Licensed under [MIT](./LICENSE).
