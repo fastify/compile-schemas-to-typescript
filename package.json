@@ -4,6 +4,7 @@
   "description": "Transform a directory of JSON Schems into TypeScript Interfaces",
   "main": "build/index.js",
   "types": "build/index.d.ts",
+  "bin": "build/cli.js",
   "scripts": {
     "compile": "tsc -p tsconfig.json",
     "start": "node lib/index.js",
