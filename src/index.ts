@@ -12,11 +12,20 @@ async function compileSchemas (input: string, output: string): Promise<void> {
     throw new Error('Input and Output paths must be specified')
   }
 
+  // create output dir - skip eexist error
+  try {
+    await fs.mkdir(path.resolve(output))
+  } catch (err) {
+    if (err.code !== 'EEXIST') throw err
+  }
+
+  // get files from input dir
   const files = await fs.readdir(path.resolve(input))
+
   for (const file of files) {
-    if (path.extname(file) === '.json') {
-      const ts = await compileFromFile(path.join(input, file))
-      await fs.writeFile(fileOutputPath(file, output), ts)
+    if (path.extname(file) === '.json') { // for every `.json` file in the input
+      const ts = await compileFromFile(path.join(input, file)) // compile to ts
+      await fs.writeFile(path.resolve(fileOutputPath(file, output)), ts) // write to output
     }
   }
 }

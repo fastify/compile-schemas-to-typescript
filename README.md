@@ -2,6 +2,14 @@
 
 This module is a wrapper around the `json-schema-to-typescript` library that enables transformation of directories of schemas instead of individual schemas. If directory support is added to the `json-schema-to-typescript` library this module will be archived.
 
+## CLI
+
+This module works as an CLI. Install as a dependency and call `compile-schemas-to-typescript` from a npm script, or use `npx`
+
+```bash
+npx compile-schemas-to-typescript <schema-dir> <types-output-dir>
+```
+
 ## API
 
 `compileSchema(input: string, output: string): Promise<void>`

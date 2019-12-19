@@ -17,7 +17,6 @@ tap.test('compileSchemas', t => {
     })
   
     try {
-      await fs.promises.mkdir('./test/types')
       await compileSchemas('./test/schemas', './test/types')
       const files = await fs.promises.readdir('./test/types')
       t.ok(files.length === 1, 'should generate 1 file')
