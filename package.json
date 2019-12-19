@@ -1,6 +1,6 @@
 {
   "name": "compile-schemas-to-typescript",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Transform a directory of JSON Schems into TypeScript Interfaces",
   "main": "build/index.js",
   "types": "build/index.d.ts",
