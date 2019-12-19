@@ -7,7 +7,7 @@ This module is a wrapper around the `json-schema-to-typescript` library that ena
 This module works as an CLI. Install as a dependency and call `compile-schemas-to-typescript` from a npm script, or use `npx`
 
 ```bash
-npx compile-schemas-to-typescript schema-dir types-output-dir
+npx compile-schemas-to-typescript <schema-dir> <types-output-dir>
 ```
 
 ## API
