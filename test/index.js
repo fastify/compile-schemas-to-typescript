@@ -2,7 +2,7 @@
 'use strict'
 
 const compileSchemas = require('../build/index.js')
-const fs = require('fs')
+const fs = require('node:fs')
 const tap = require('tap')
 const rmdir = require('rimraf')
 
